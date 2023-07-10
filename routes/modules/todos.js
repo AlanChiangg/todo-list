@@ -1,11 +1,7 @@
-// 引用 Express 與 Express 路由器
 const express = require('express')
 const router = express.Router()
-// 引用Todo model
 const Todo = require('../../models/todo')
 
-
-// 定義todo路由
 router.get('/new', (req, res) => {
   res.render('new')
 })
@@ -54,5 +50,4 @@ router.delete('/:id', (req, res) => {
     .catch(error => console.log(error))
 })
 
-// 匯出路由器
 module.exports = router
